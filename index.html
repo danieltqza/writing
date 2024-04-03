@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <title>Proyect-TypeWriting-Javascript-01</title>
+</head>
+
+<body>
+    <main>
+        <section id="game">
+            <time></time>
+             
+            <input autofocus>
+        </section>
+    </main>
+
+</body>
+<script>
+    const $time = document.querySelector('time');
+    const $p = document.querySelector('p');
+    const $input = document.querySelector('input');
+    
+    const INITIAL_TIME = 30;
+
+    const TEXT = 'A cat with a dog are friends forever in the life with a bird this a paragraph for test the page i really i dont know what i need to realize'
+
+    let words = [];
+    let currentTime = INITIAL_TIME;
+
+    initGame()
+    initEvents()
+
+    function initGame() {
+        words = TEXT.split(' ').slice(0, 32)
+        currentTime = INITIAL_TIME;
+
+        $time.textContent = currentTime
+
+        
+    $paragraph.innerHTML = words.map((word, index) => {
+      const letters = word.split('')
+
+      return `<word>
+        ${letters
+          .map(letter => `<letter>${letter}</letter>`)
+          .join('')
+        }
+      </word>
+      `
+    }).join('')
+
+        };
+    function initEvents() {}
+</script>
+</html>

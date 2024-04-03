@@ -1,0 +1,46 @@
+@import './font.css';
+
+:root {
+    color-scheme: light dark;
+    --green: #00b755;
+    --yellow: #daaf38;
+    --red: #ca4754;
+    --black: #222;
+    --gray: #999;
+    }
+
+body{
+    background: var(--black);
+    font-family: monospace;
+    display: grid;
+    padding: 32px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+section{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 500px;
+}
+
+time{
+    color: var(--yellow);
+}
+
+input{
+    z-index: -999;
+    position: absolute;
+    top:  0;
+    left:  0;
+    pointer-events: none;
+
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 16px;
+}
